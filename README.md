@@ -1,2 +1,2 @@
-# holbertonschool_monty
+# holbertonschool-monty
 Monty is a language kinda
