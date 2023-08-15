@@ -10,7 +10,7 @@
 void (*get_op_func(char *s))(stack_t **, unsigned int line_number)
 {
 
-instruction_t instruction[] = {
+instruction_t inst[] = {
 		    {"push", push},
             {"pall", pall},
             {"pint", pint},
@@ -25,9 +25,9 @@ instruction_t instruction[] = {
 
 	i = 0;
 	/* iterate over ops array */
-	while (instruction[i].opcode != NULL && *(instruction[i].opcode) != *s)
+	while (inst[i].opcode != NULL && strcmp(inst[i].opcode, s) != 0)
 	{
 		i++;
 	}
-	return (instruction[i].f);
+	return (inst[i].f);
 }

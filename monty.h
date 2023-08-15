@@ -38,7 +38,8 @@ typedef struct instruction_s
 } instruction_t;
 
 int main(int argc, char **argv);
-
+int _isdigit(char *c);
+void cleanStack(stack_t **stack);
 void (*get_op_func(char *s))(stack_t **, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);

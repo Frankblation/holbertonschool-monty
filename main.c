@@ -33,11 +33,14 @@ int main(int argc, char **argv)
 {
 	FILE* fp;
 
-	if (argc !=0)
+	if (argc !=2)
 	error_usage();
 
 	fp = fopen(argv[1], "r");
 
 	if(!fp)
 		file_error(argv[1]);
+
+	return (1);
+
 }
